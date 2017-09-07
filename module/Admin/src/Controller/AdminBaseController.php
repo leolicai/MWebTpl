@@ -10,8 +10,6 @@
 namespace Admin\Controller;
 
 
-use Admin\Service\AclAdminerManager;
-use Admin\Service\AclGroupManager;
 use Admin\Service\AdminerManager;
 use Admin\Service\AuthService;
 use Admin\Service\ComponentManager;
@@ -25,22 +23,6 @@ use Application\Controller\AppBaseController;
  */
 class AdminBaseController extends AppBaseController
 {
-
-    /**
-     * @return AclAdminerManager
-     */
-    protected function appAdminAclAdminerManager()
-    {
-        return $this->appServiceManager(AclAdminerManager::class);
-    }
-
-    /**
-     * @return AclGroupManager
-     */
-    protected function appAdminAclGroupManager()
-    {
-        return $this->appServiceManager(AclGroupManager::class);
-    }
 
     /**
      * @return ComponentManager
